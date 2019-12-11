@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main()
+{
+	int i,size,num1;
+	int max,min;
+
+	
+	scanf("%d\n",&size);
+	int numarr[size];
+	for(i=0; i<size; i++)
+	{
+		scanf("%d",&num1);
+		numarr[i] = num1;
+	
+	}
+		max = numarr[0];
+		min = numarr[0];
+	
+	for(i=0; i<size; i++)
+	{
+	if(numarr[i]>max){
+		max = numarr[i];
+	}
+	if(numarr[i]<min){
+		min = numarr[i];
+	}
+	}	
+	
+	printf("%d %d\n",min,max);
+	
+	
+	
+	return 0;
+}
