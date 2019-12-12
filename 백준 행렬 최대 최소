@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <stdlib.h>
 int main()
 {
 	int i,size,num1;
@@ -7,7 +7,8 @@ int main()
 
 	
 	scanf("%d\n",&size);
-	int numarr[size];
+	int *numarr = malloc(sizeof(int)*size);
+//	int numarr[size];
 	for(i=0; i<size; i++)
 	{
 		scanf("%d",&num1);
@@ -28,7 +29,7 @@ int main()
 	}	
 	
 	printf("%d %d\n",min,max);
-	
+	free(numarr);
 	
 	
 	return 0;
